@@ -11,6 +11,11 @@
                           :options="modes">
       </b-form-radio-group>
     </b-form-group>
+    <b-form-checkbox
+      v-model="f.options.inline"
+    >
+      {{ $t('field.kind.file.inline') }}
+    </b-form-checkbox>
   </div>
 </template>
 

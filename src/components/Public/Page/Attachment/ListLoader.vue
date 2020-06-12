@@ -53,6 +53,7 @@
         <c-preview-inline
           v-if="canPreview(a)"
           @openPreview="openLightbox({ ...a, ...$event })"
+          :inline="inline"
           :src="inlineUrl(a)"
           :meta="a.meta"
           :name="a.name"
@@ -101,6 +102,11 @@ export default {
     },
 
     enableOrder: {
+      type: Boolean,
+      default: false,
+    },
+
+    inline: {
       type: Boolean,
       default: false,
     },

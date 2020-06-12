@@ -1,8 +1,11 @@
 <template>
-  <list-loader kind="record"
-               :set="set"
-               :namespace="namespace"
-               :mode="field.options.mode"></list-loader>
+  <list-loader
+    kind="record"
+    :set="set"
+    :namespace="namespace"
+    :inline="field.options.inline"
+    :mode="field.options.mode"
+  />
 </template>
 <script>
 import base from './base'

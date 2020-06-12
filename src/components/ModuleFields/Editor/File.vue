@@ -4,18 +4,23 @@
     label-class="text-secondary"
     :class="formGroupStyleClasses"
   >
-    <uploader :endpoint="endpoint"
-              @uploaded="appendAttachment"
-              :acceptedFiles="$s('Page.Attachments.Mimetypes', ['*/*'])"
-              :maxFilesize="$s('Page.Attachments.MaxSize', 100)"/>
+    <uploader
+      :endpoint="endpoint"
+      @uploaded="appendAttachment"
+      :acceptedFiles="$s('Page.Attachments.Mimetypes', ['*/*'])"
+      :maxFilesize="$s('Page.Attachments.MaxSize', 100)"
+    />
 
-    <list-loader kind="record"
-                 :set.sync="set"
-                 :namespace="namespace"
-                 :enable-order="field.isMulti"
-                 enable-delete
-                 mode="list"
-                 class="mt-2"></list-loader>
+    <list-loader
+      kind="record"
+      :set.sync="set"
+      :namespace="namespace"
+      :enable-order="field.isMulti"
+      enable-delete
+      :inline="field.options.inline"
+      :mode="field.options.mode"
+      class="mt-2"
+    />
     <errors :errors="errors" />
   </b-form-group>
 </template>

@@ -928,6 +928,7 @@ export default {
       },
       file: {
         label: 'File',
+        inline: 'Inline preview',
         view: {
           modeLabel: 'View mode',
           modeFootnote: 'How files are represented in record page blocks',
