@@ -231,7 +231,7 @@
             :key="field.key"
           >
             <field-editor
-              v-if="field.moduleField.canUpdateRecordValue && field.editable"
+              v-if="field.moduleField.canUpdateRecordValue && field.editable && field.isWritable"
               :field="field.moduleField"
               value-only
               :record="item.r"
@@ -243,7 +243,7 @@
               @click.stop
             />
             <div
-              v-else-if="field.moduleField.canReadRecordValue && !field.edit"
+              v-else-if="field.moduleField.canReadRecordValue && !field.editable"
               class="mb-0"
               :class="{
                 'field-adjust-offset': inlineEditing,

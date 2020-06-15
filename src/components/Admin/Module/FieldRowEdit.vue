@@ -84,6 +84,16 @@
       />
     </td>
     <td
+      class="text-center align-middle"
+    >
+      <b-form-checkbox
+        v-model="value.isWritable"
+        :disabled="!value.cap.writable"
+        :value="true"
+        :unchecked-value="false"
+      />
+    </td>
+    <td
       class="text-right align-middle"
       style="min-width: 100px;"
     >

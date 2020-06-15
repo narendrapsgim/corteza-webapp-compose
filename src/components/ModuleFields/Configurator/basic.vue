@@ -25,6 +25,14 @@
     >
       {{ $t('general.label.multi') }}
     </b-form-checkbox>
+    <b-form-checkbox
+      v-model="field.isWritable"
+      :disabled="!field.cap.writable"
+      :value="true"
+      :unchecked-value="false"
+    >
+      {{ $t('general.label.writable') }}
+    </b-form-checkbox>
 
     <hr />
     <b-form-group

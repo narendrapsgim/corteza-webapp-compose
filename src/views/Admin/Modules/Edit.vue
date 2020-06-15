@@ -37,6 +37,7 @@
                   <th v-b-tooltip.hover :title="$t('module.edit.tooltip.multi')" class="info text-center">{{ $t('general.label.multi') }}</th>
                   <th v-b-tooltip.hover :title="$t('module.edit.tooltip.required')" class="info text-center">{{ $t('general.label.required') }}</th>
                   <th v-b-tooltip.hover :title="$t('module.edit.tooltip.private')" class="info text-center">{{ $t('general.label.private') }}</th>
+                  <th v-b-tooltip.hover :title="$t('module.edit.tooltip.writable')" class="info text-center">{{ $t('general.label.writable') }}</th>
                   <th></th>
                 </tr>
                 </thead>

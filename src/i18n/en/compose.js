@@ -420,6 +420,7 @@ export default {
         multi: 'Allows the field to hold multiple values',
         required: 'Required field',
         private: 'Sensitive data',
+        writable: 'Field value can be edited',
       },
       steps: {
         recordPage: 'Record page',
@@ -585,6 +586,7 @@ export default {
       multi: 'Multi value',
       required: 'Required',
       private: 'Private',
+      writable: 'Writable',
       updatedAt: '$t(field.system.updatedAt)',
       pageBuilder: 'Page builder',
       moduleName: 'Module name',

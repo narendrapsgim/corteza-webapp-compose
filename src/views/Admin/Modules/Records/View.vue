@@ -29,7 +29,7 @@
             class="value"
           >
             <field-editor
-              v-if="field.canUpdateRecordValue && inEditing"
+              v-if="field.canUpdateRecordValue && inEditing && field.isWritable"
               :namespace="$attrs.namespace"
               :record="record"
               :field="field"

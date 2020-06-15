@@ -10,7 +10,7 @@
         class="p-2 border-bottom border-light"
       >
         <field-editor
-          v-if="field.canUpdateRecordValue"
+          v-if="field.canUpdateRecordValue && field.isWritable"
           v-bind="{ ...$props, errors: fieldErrors(field.name) }"
           class="field"
           :field="field"
@@ -27,6 +27,7 @@
           <field-viewer
             :field="field"
             v-bind="$props"
+            value-only
           />
         </div>
         <div
