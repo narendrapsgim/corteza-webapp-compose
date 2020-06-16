@@ -47,7 +47,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Chart from '../Chart'
 import { compose } from '@cortezaproject/corteza-js'
 
 export default {
@@ -70,7 +69,7 @@ export default {
       show: false,
       classes: {
         module: compose.Module,
-        chart: Chart,
+        chart: compose.Chart,
         // 'trigger': Trigger,
       },
     }
@@ -100,6 +99,7 @@ export default {
         }
         this.raiseSuccessAlert(this.$t('notification.import.successful'))
       } catch (e) {
+        console.error(e)
         this.raiseWarningAlert(this.$t('notification.import.failed'))
       }
       this.cancelImport()
