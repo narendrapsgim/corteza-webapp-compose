@@ -417,6 +417,24 @@ export default {
       newField: 'Add new field',
       systemFields: 'System fields:',
       reorderFields: 'Reorder fields',
+      federationSettings: {
+        title: 'Federation Settings',
+        specificTitle: 'Federation Settings ({{handle}})',
+
+        general: {
+          title: 'General',
+          send: 'Send new records to the federated network (upstream)',
+          receive: 'Receive new records from another organization (downstream)',
+        },
+        downstream: {
+          title: 'Downstream',
+          allFields: 'All Fields',
+        },
+        upstream: {
+          title: 'Upstream',
+          allFields: 'All Fields',
+        },
+      },
       tooltip: {
         name: 'Must be a-z/A-Z, 0-9 or underscore',
         title: 'The name displayed in form input / data lists',
